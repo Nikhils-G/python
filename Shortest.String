@@ -1,0 +1,10 @@
+def shortest_string(strings):
+    shortest = strings[0]
+    for string in strings[1:]:
+        if len(string) < len(shortest):
+            shortest = string
+    return shortest
+
+# Test the function
+strings = ["apple", "banana", "pear", "kiwi", "orange"]
+print(shortest_string(strings))  # Output: "pear"
