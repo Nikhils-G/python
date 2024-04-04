@@ -1,0 +1,7 @@
+def count_unique_numbers(numbers):
+    unique_numbers = set(numbers)
+    return len(unique_numbers)
+
+# Test the function
+numbers = [1, 2, 3, 4, 2, 3, 5]
+print(count_unique_numbers(numbers))  # Output: 5
