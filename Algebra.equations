@@ -1,0 +1,60 @@
+int input[3];
+int output[3];
+int total[3];
+
+int i;
+
+int cars_input;
+int cars_output;
+
+int x1, x2, x3, x4;
+
+
+for(i = 0; i < 4; i++) 
+{           
+    printf("\nEnter the number of cars entering the street [%d] of the city: ", i); 
+    scanf("%d", &input[i]);     
+    
+    printf("Enter the number of cars leaving the street [%d] of the city: ", i);
+    scanf("%d", &output[i]);
+    
+    
+    if(input[i] < 0 || ouput[i] < 0) 
+    {
+    printf("\nNegative values cannot be entered.");
+    return 0;
+    }
+    
+}
+
+
+cars_input = input[0] + input[1] + input[2] + input[3];
+
+cars_output = output[0] + output[1] + output[2] + output[3];
+
+printf("\n%d cars enter and %d cars leave the city", cars_input, cars_output);
+
+
+total[0] = output[3] - input[0];
+total[1] = output[0] - input[1];
+total[2] = output[1] - input[2];
+total[3] = output[2] - input[3];
+                                
+// Not necessary, just wrote this to see if it was working
+printf("\n\nTotal 0 %d, Total 1 %d, Total 2 %d, ", total[0], total[1], total[2], total[3]);
+
+printf("\n\nEnter the number of cars between intersection C and D: ");
+scanf("%d", &x4);
+
+
+x3 = x4 + total[2];
+
+x2 = x3 + total[1];
+
+x1 = x2 + total[0];
+
+
+printf("\nx1 = %d \tx2 = %d \tx3 = %d \tx4 = %d", x1, x2, x3, x4);
+
+
+return 0; 
